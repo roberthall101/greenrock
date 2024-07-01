@@ -24,16 +24,8 @@ export function Welcome() {
                 title="Complete this form!"
             >
             </Modal>
-            <Button size={'xl'} variant="filled" className={classes.button} onClick={() => setOpened(true)}>GET A FREE QUOTE & SAVINGS ESTIMATE</Button>
+            <Button size={'xl'} variant="filled" className={classes.button} onClick={() => setOpened(true)}>GET A FREE QUOTE + SAVINGS ESTIMATE</Button>
         </Center>
-      {/*<Text color="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">*/}
-      {/*  This starter Next.js project includes a minimal setup for server side rendering, if you want*/}
-      {/*  to learn more on Mantine + Next.js integration follow{' '}*/}
-      {/*  <Anchor href="https://mantine.dev/guides/next/" size="lg">*/}
-      {/*    this guide*/}
-      {/*  </Anchor>*/}
-      {/*  . To get started edit index.tsx file.*/}
-      {/*</Text>*/}
     </>
   );
 }

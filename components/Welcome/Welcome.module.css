@@ -12,6 +12,7 @@
 .button {
   color: var(--mantine-color-white);
   background-color: #737373;
+  font-size: medium;
 }
 
 .transparent {

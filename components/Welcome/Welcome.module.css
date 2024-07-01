@@ -1,0 +1,24 @@
+.title {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  font-size: rem(100px);
+  font-weight: 700;
+  letter-spacing: rem(-2px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(30px);
+  }
+}
+
+.button {
+  color: var(--mantine-color-white);
+  background-color: #737373;
+}
+
+.transparent {
+  margin-top: 0.46em;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+}
+
+.transparent:hover {
+  color: light-dark(var(--mantine-color-gray-7), var--mantine-color-dark-0));
+}

@@ -20,7 +20,7 @@ const ContactForm = () => {
         },
     });
 
-    const handleSubmit = (values) => {
+    const handleSubmit = (values: any) => {
         // Handle form submission, e.g., send data to a server
         console.log(values);
     };

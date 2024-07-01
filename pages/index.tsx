@@ -36,9 +36,9 @@ export default function HomePage() {
                     </Grid.Col>
                 </Grid>
             </Container>
-            <Title className={classes.title} ta="center" m='md'>
-                Keep up with the team...
-            </Title>
+            {/*<Title className={classes.title} ta="center" m='md'>*/}
+            {/*    Keep up with the team...*/}
+            {/*</Title>*/}
         </Container>
     );
 }

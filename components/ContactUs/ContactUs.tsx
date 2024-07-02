@@ -47,6 +47,9 @@ export function ContactUs() {
                     <Group mt="xl">{icons}</Group>
                 </div>
                 <div className={classes.form}>
+                    <Text className={classes.formDescription} mt="sm" mb={30}>
+                        Send us a message!
+                    </Text>
                     <TextInput
                         label="Email"
                         placeholder="your@email.com"
@@ -68,7 +71,7 @@ export function ContactUs() {
                         classNames={{ input: classes.input, label: classes.inputLabel }}
                     />
 
-                    <Group justify="flex-end" mt="md">
+                    <Group justify="center" mt="md">
                         <Button className={classes.control}>Send message</Button>
                     </Group>
                 </div>

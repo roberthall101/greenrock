@@ -1,9 +1,36 @@
-import {Title, Modal, Button, Center, Image} from '@mantine/core';
+import {Title, Modal, Button, Center, Image, Input, InputWrapper, Text} from '@mantine/core';
 import classes from './Welcome.module.css';
 import {useState} from "react";
 
 export function Welcome() {
     const [opened, setOpened] = useState(false);
+
+    const [energyConsumption, setEnergyConsumption] = useState<number>(0);
+    const [cost, setCost] = useState<number>(0);
+    const [total, setTotal] = useState<string>('0.00');
+
+    const handleEnergyChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const inputValue = event.target.value;
+
+        // Check if the input value is a valid number
+        if (/^\d*\.?\d*$/.test(inputValue)) {
+            // Update state with the parsed number value
+            setEnergyConsumption(Number(inputValue));
+            setTotal((Number(inputValue) * cost/100).toFixed(2));
+        }
+    };
+
+    const handleCostChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const inputValue = event.target.value;
+
+        // Check if the input value is a valid number
+        if (/^\d*\.?\d*$/.test(inputValue)) {
+            // Update state with the parsed number value
+            setCost(Number(inputValue));
+            setTotal((energyConsumption * Number(inputValue)/100).toFixed(2));
+        }
+    };
+
   return (
     <>
         <Image
@@ -12,7 +39,7 @@ export function Welcome() {
         radius='md'
         />
         <Title className={classes.title} ta="center" m='md'>
-            Your renewable solution
+            Renewable Energy Solutions Fueling the Future
             {/*<Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>*/}
             {/*  GreenRock*/}
             {/*</Text>*/}
@@ -21,10 +48,35 @@ export function Welcome() {
             <Modal
                 opened={opened}
                 onClose={() => setOpened(false)}
-                title="Complete this form!"
+                title="See how much you could save!"
+                centered
             >
+                <InputWrapper label="Quarterly Energy Consumption (in kWh)">
+                    <Input
+                        value={String(energyConsumption)}
+                        onChange={handleEnergyChange}
+                        placeholder="Enter energy consumption"
+                        type="number"
+                        suffix="kWh"
+                        min={0}
+                        required
+                        rightSection={<Text className={classes.kwh}>kWh</Text>}
+                    />
+                </InputWrapper>
+                <InputWrapper label="Cost per kWh (in pence)">
+                    <Input
+                        value={String(cost)}
+                        onChange={handleCostChange}
+                        placeholder="Enter cost per unit"
+                        type="number"
+                        min={0}
+                        required
+                        rightSection={<Text className={classes.kwh}>p</Text>}
+                    />
+                </InputWrapper>
+                <Text ta={'center'} pt={'sm'}>Your current cost is £{total} per quarter</Text>
             </Modal>
-            <Button size={'xl'} variant="filled" className={classes.button} onClick={() => setOpened(true)}>GET A FREE QUOTE + SAVINGS ESTIMATE</Button>
+            <Button size={'xl'} variant="filled" className={classes.button} onClick={() => setOpened(true)}>Free Quote & Savings Estimate</Button>
         </Center>
     </>
   );

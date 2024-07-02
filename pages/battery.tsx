@@ -1,10 +1,10 @@
 import {HeaderMenu} from "../components/HeaderMenu/HeaderMenu";
-import ContactForm from "@/components/ContactForm/ContactForm";
-import {Text, Title} from "@mantine/core";
+import {Container, Text, Title} from "@mantine/core";
+import {ContactUs} from "@/components/ContactUs/ContactUs";
 
 export default function ContactPage() {
     return (
-        <>
+        <Container size={'100%'} >
             <HeaderMenu />
             <Title ta={'center'} order={1}>Battery storage</Title>
             <Title ta={'center'} order={3} m={'lg'}>Entry Level Storage Solution</Title>
@@ -23,10 +23,7 @@ export default function ContactPage() {
             </Text>
 
             <Title ta={'center'} order={3} m={'xl'}>Get in touch below to get a free savings estimate.</Title>
-
-            <ContactForm />
-
-
-        </>
+            <ContactUs />
+        </Container>
     );
 }

@@ -1,11 +1,12 @@
+import { Container } from "@mantine/core";
 import {HeaderMenu} from "../components/HeaderMenu/HeaderMenu";
-import ContactForm from "@/components/ContactForm/ContactForm";
+import {ContactUs} from "@/components/ContactUs/ContactUs";
 
 export default function ContactPage() {
     return (
-        <>
+        <Container size={'100%'} >
             <HeaderMenu />
-            <ContactForm />
-        </>
+            <ContactUs />
+        </Container>
     );
 }

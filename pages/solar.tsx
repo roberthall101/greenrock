@@ -1,10 +1,10 @@
 import {HeaderMenu} from "../components/HeaderMenu/HeaderMenu";
-import ContactForm from "@/components/ContactForm/ContactForm";
-import {Text, Title} from "@mantine/core";
+import {Container, Text, Title} from "@mantine/core";
+import {ContactUs} from "@/components/ContactUs/ContactUs";
 
-export default function ContactPage() {
+export default function SolarPage() {
     return (
-        <>
+        <Container size={'100%'} >
             <HeaderMenu />
             <Title ta={'center'} order={1}>Solar PV</Title>
             <Title ta={'center'} order={3} m={'lg'}>Electricity from the sun!</Title>
@@ -18,6 +18,7 @@ export default function ContactPage() {
             <Text color="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
                 To find out how much you could save on your bills, contact us below for a free quote and savings estimate!
             </Text>
-        </>
+            <ContactUs />
+        </Container>
     );
 }

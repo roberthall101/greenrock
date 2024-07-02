@@ -23,3 +23,8 @@
 .transparent:hover {
   color: light-dark(var(--mantine-color-gray-7), var--mantine-color-dark-0));
 }
+
+.kwh {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  padding-right: rem(20px);
+}

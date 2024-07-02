@@ -18,10 +18,9 @@ import {
     IconBatteryCharging,
     IconClipboardCheck,
     IconPhone,
-    IconSun, IconMoon
+    IconSun, IconMoon, IconSolarPanel2, IconBolt, IconHomeBolt, IconBuildingFactory2
 } from '@tabler/icons-react';
 import classes from './HeaderMenu.module.css';
-import WelcomeClasses from '../Welcome/Welcome.module.css';
 import {useEffect, useState} from "react";
 
 const links = [
@@ -127,12 +126,12 @@ export function HeaderMenu() {
                         <NavLink
                             href="/solutions"
                             label="Solutions"
-                            leftSection={<IconBatteryCharging size="1rem" stroke={1.5} />}
+                            leftSection={<IconBolt size="1rem" stroke={1.5} />}
                         >
                             <NavLink
                                 href="/solar"
                                 label="Solar PV"
-                                leftSection={<IconBatteryCharging size="1rem" stroke={1.5} />}
+                                leftSection={<IconSolarPanel2 size="1rem" stroke={1.5} />}
                             />
                                 <NavLink
                                     href="/battery"
@@ -148,12 +147,12 @@ export function HeaderMenu() {
                             <NavLink
                                 href="/domestic"
                                 label="Domestic"
-                                leftSection={<IconBatteryCharging size="1rem" stroke={1.5} />}
+                                leftSection={<IconHomeBolt size="1rem" stroke={1.5} />}
                             />
                             <NavLink
                                 href="/commercial"
                                 label="Commercial"
-                                leftSection={<IconBatteryCharging size="1rem" stroke={1.5} />}
+                                leftSection={<IconBuildingFactory2 size="1rem" stroke={1.5} />}
                             />
                         </NavLink>
                         <NavLink

@@ -57,7 +57,6 @@ export function Welcome() {
                         onChange={handleEnergyChange}
                         placeholder="Enter energy consumption"
                         type="number"
-                        suffix="kWh"
                         min={0}
                         required
                         rightSection={<Text className={classes.kwh}>kWh</Text>}

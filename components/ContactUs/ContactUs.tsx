@@ -12,20 +12,18 @@ import {IconBrandInstagram, IconBrandFacebook} from '@tabler/icons-react';
 import { ContactIconsList } from './ContactIcons';
 import classes from './ContactUs.module.css';
 
-const social = [IconBrandFacebook, IconBrandInstagram];
-
 export function ContactUs() {
 
     const icons = [
         (
-            <a href={'https://www.facebook.com'} target="_blank">
+            <a href={'https://www.facebook.com'} target="_blank" key={1}>
                 <ActionIcon size={28} className={classes.social} variant="transparent">
                     <IconBrandFacebook size="1.4rem" stroke={1.5} />
                 </ActionIcon>
             </a>
         ),
         (
-            <a href={'https://www.instagram.com'} target="_blank">
+            <a href={'https://www.instagram.com'} target="_blank" key={2}>
                 <ActionIcon size={28} className={classes.social} variant="transparent">
                     <IconBrandInstagram size="1.4rem" stroke={1.5} />
                 </ActionIcon>

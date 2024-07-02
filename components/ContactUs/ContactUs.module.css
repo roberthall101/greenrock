@@ -19,7 +19,6 @@
 
 .description {
     color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-    max-width: rem(300px);
 
     @media (max-width: $mantine-breakpoint-sm) {
         max-width: 100%;
@@ -28,11 +27,6 @@
 
 .formDescription {
     color: var(--mantine-color-black);
-    max-width: rem(300px);
-
-    @media (max-width: $mantine-breakpoint-sm) {
-        max-width: 100%;
-    }
     font-weight: bolder;
     text-align: center;
 }

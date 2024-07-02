@@ -21,8 +21,6 @@ export default function ContactPage() {
             <Text color="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
                 This AGM option provides a more affordable way to store your home-generated energy, though it requires more space, making a garage or covered area highly recommended.
             </Text>
-
-            <Title ta={'center'} order={3} m={'xl'}>Get in touch below to get a free savings estimate.</Title>
             <ContactUs />
         </Container>
     );

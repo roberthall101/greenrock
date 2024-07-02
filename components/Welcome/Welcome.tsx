@@ -48,7 +48,7 @@ export function Welcome() {
             <Modal
                 opened={opened}
                 onClose={() => setOpened(false)}
-                title="See how much you could save!"
+                title={<div style={{ textAlign: 'center', width: '100%' }}>See how much you could save!</div>}
                 centered
             >
                 <InputWrapper label="Quarterly Energy Consumption (in kWh)">

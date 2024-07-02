@@ -14,7 +14,6 @@ export default function SolarPage() {
             <Text color="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
                 GreenRock Solar is dedicated to utilizing top-quality materials to guarantee our customers achieve optimal performance from their systems over their entire lifespan.
             </Text>
-            <Title ta={'center'} order={3} m={'lg'}>Get in touch!</Title>
             <Text color="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
                 To find out how much you could save on your bills, contact us below for a free quote and savings estimate!
             </Text>

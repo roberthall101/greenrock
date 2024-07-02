@@ -1,11 +1,8 @@
-import {useCallback, useEffect, useRef, useState} from 'react';
-import { Carousel, Embla } from '@mantine/carousel';
-import {Progress, Image, Container} from '@mantine/core';
-import * as classes from './Carousel.module.css'
-import Autoplay from "embla-carousel-autoplay";
+import { Carousel } from '@mantine/carousel';
+import { Image } from '@mantine/core';
+import classes from './Carousel.module.css'
 
 export function PhotoCarousel() {
-    const autoplay = useRef(Autoplay({ delay: 100 }));
 
     const images = [
         'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80',
@@ -31,9 +28,7 @@ export function PhotoCarousel() {
                 initialSlide={2}
                 loop={true}
                 className={classes.carousel}
-                plugins={[autoplay.current]}
                 withControls={false}
-                slideGap="md"
             >
                 {slides}
             </Carousel>

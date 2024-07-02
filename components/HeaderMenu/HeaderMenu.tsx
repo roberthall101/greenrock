@@ -9,7 +9,7 @@ import {
     Stack,
     NavLink,
     Box,
-    useMantineColorScheme
+    useMantineColorScheme, Image
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import {
@@ -95,11 +95,18 @@ export function HeaderMenu() {
                 <div className={classes.inner}>
                     <Button variant='transparent' component="a"
                             href="/">
+
                         <div className={classes.logo}>
-                            <span className={classes.green}>Green</span><span className={classes.rock}>Rock</span>
+                            <Group>
+                            <span><Image src={'/gr-logo.png'} w={'auto'} fit={'contain'} h={50}/></span>
+                                <div>
+                                    <span className={classes.green}>Green</span><span
+                                    className={classes.rock}>Rock</span><span
+                                    className={classes.green}> Renewables</span>
+                                </div>
+                            </Group>
                         </div>
                     </Button>
-
                     {/*<MantineLogo size={28} />*/}
                     <Group gap={5} visibleFrom="sm">
                         {isClient && (colorScheme === 'dark' ? <IconSun onClick={() => toggleColorScheme() } className={classes.lighter} size={18} /> : <IconMoon onClick={() => toggleColorScheme() } className={classes.lighter} size={18} />) }
